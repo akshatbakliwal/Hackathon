@@ -99,11 +99,11 @@ public class MethodRegisterController {
 		String fileName = ""; 
 		if(apiId != -1){
 			fileName = funcName+"-"+apiId + ".doc";
-			downloadLink = "http://bglc02m969efh01:8080/downloadfile/"+funcName +"-"+apiId;
+			downloadLink = "http://"+Application.Hostname+":8080/downloadfile/"+funcName +"-"+apiId;
 			AugMethods.updateDownloadLink(apiId, downloadLink);
 		}
 
-		String apiURL = "http://bglc02m969efh01:8080/apify/v1/endpoint/"+funcName+"-"+apiId;
+		String apiURL = "http://"+Application.Hostname+":8080/apify/v1/endpoint/"+funcName+"-"+apiId;
 		Class inoutClass = cl.loadClass(inputType);
 		String sampleRequestPayload = "";
 		sampleRequestPayload = traverseFields (inoutClass, sampleRequestPayload);
