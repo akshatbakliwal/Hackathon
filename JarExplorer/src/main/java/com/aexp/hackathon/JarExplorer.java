@@ -100,7 +100,8 @@ public class JarExplorer {
 			classDescription.append("\t").append(methodDescription).append("\n");
 		}
 		classDescription.append("}\n");
-		if(methodArray.length() != 0 && !classType.getClassName().contains(".pojo.") && !classType.getClassName().contains(".model.") ){
+	/*	if(methodArray.length() != 0 && !classType.getClassName().contains(".pojo.") && !classType.getClassName().contains(".model.") ){ */
+		if(methodArray.length() != 0 ){
 			JSONObject classObj = new JSONObject();
 			classObj.put("name", classType.getClassName());
 			classObj.put("methods", methodArray);
